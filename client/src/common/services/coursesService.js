@@ -1,9 +1,8 @@
 (function() {
   'use strict';
 
-  angular
-      .module('common.services.data',[])
-      .factory('CoursesService', ['$http','Backand',coursesService]);
+  angular.module('common.services.data')
+      .factory('CoursesService', ['$http', 'Backand', coursesService]);
 
   function coursesService($http, Backand) {
 
@@ -51,7 +50,7 @@
 
     //get tasks
     function getTasks(courseId){
-      return $http.get(getUrl() + courseId + '/tasks');
+      return $http.get(getUrl() + '/' + courseId + '/tasks');
     }
 
   }
